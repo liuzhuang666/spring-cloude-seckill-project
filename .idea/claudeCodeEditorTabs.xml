@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ClaudeCodeEditorTabs">
+    <option name="activeSessionId" value="4e585af6-b03e-4986-8893-dced708a1459" />
+    <option name="openSessionIds">
+      <list>
+        <option value="573adee0-5820-4006-bb24-7ce7c6560149" />
+        <option value="4e585af6-b03e-4986-8893-dced708a1459" />
+      </list>
+    </option>
+    <option name="sessionPaths">
+      <map>
+        <entry key="4e585af6-b03e-4986-8893-dced708a1459" value="/sessions/e138ed01-100c-465a-a754-bf0a6accb0de" />
+        <entry key="573adee0-5820-4006-bb24-7ce7c6560149" value="/sessions/f664204d-5c84-488b-bc0c-40a2332f7064" />
+      </map>
+    </option>
+    <option name="sessionTitles">
+      <map>
+        <entry key="4e585af6-b03e-4986-8893-dced708a1459" value="解释一下这段代码的作用" />
+        <entry key="573adee0-5820-4006-bb24-7ce7c6560149" value="这里的配置和什么有关" />
+      </map>
+    </option>
+  </component>
+</project>

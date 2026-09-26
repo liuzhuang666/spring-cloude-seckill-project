@@ -1,0 +1,25 @@
+server:
+  port: 7001
+  tomcat:
+    threads:
+      max: 400
+spring:
+  application:
+    name: seckill-web
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+#    lettuce:
+#      pool:
+#        enabled: true
+#        max-active: 100
+#        max-idle: 20
+#        min-idle: 5
+rocketmq:
+  name-server: 192.168.88.131:9876
+  producer:
+    group: product-group
+    send-message-timeout: 3000 # 消息发送超时的时间
+    retry-times-when-send-async-failed: 3  # 异步消息发送失败之后的重试次数
+    max-message-size: 4194304  # 设置消息的最大长度

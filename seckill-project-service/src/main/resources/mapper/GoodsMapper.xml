@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xq.mapper.GoodsMapper">
+
+    <resultMap id="BaseResultMap" type="com.xq.domain.Goods">
+        <!--@mbg.generated-->
+        <!--@Table goods-->
+        <id column="id" jdbcType="INTEGER" property="goodsId" />
+        <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+        <result column="price" jdbcType="DECIMAL" property="price" />
+        <result column="content" jdbcType="LONGVARCHAR" property="content" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="stocks" jdbcType="INTEGER" property="totalStocks" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="spike" jdbcType="INTEGER" property="spike" />
+    </resultMap>
+
+    <select id="selectSeckillGoods" resultMap="BaseResultMap">
+        select id,stocks from goods where `status` = 1 and spike = 1
+    </select>
+
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+         select id, goods_name, price, `status`, stocks, create_time, update_time, spike
+         from goods where id = #{id}
+    </select>
+
+    <update id="updateStock">
+       update goods set stocks = stocks - 1 ,update_time = now() where id = #{goodsId} and stocks > 0
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType = "com.xq.domain.Goods">
+        update goods
+            set goods_name = #{goodsName},
+                price = #{price},
+                `status` = #{status},
+                stocks = #{totalStocks},
+                create_time = #{createTime},
+                update_time = #{updateTime},
+                spike = #{spike}
+            where id = #{goodsId}
+    </update>
+</mapper>
